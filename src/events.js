@@ -80,9 +80,9 @@ export default function(ctx) {
   events.touchstart = function(event) {
     // Prevent emulated mouse events because we will fully handle the touch here.
     // This does not stop the touch events from propogating to mapbox though.
-    if (typeof event.originalEvent.cancelable !== "boolean" || event.originalEvent.cancelable) {
-      event.originalEvent.preventDefault();
-    }
+  
+      //event.originalEvent.preventDefault();
+
     if (!ctx.options.touchEnabled) {
       return;
     }
